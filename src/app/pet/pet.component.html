@@ -1,3 +1,13 @@
 <div class="pet">
   <p>{{ name }}</p>
 </div>
+<div *ngIf="isFav === true">
+  <button class="button deleteButton" (click)="deleteFromFavs(this.name)">
+    Delete from Favs
+  </button>
+</div>
+<div *ngIf="isFav === false">
+  <button class="button addButton" (click)="addToFavs(this.name)">
+    Add to Favs
+  </button>
+</div>

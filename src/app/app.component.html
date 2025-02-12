@@ -1,6 +1,18 @@
+<div class="favorite">
+  <ul>
+    <li *ngFor="let f of favs">{{ f }}</li>
+  </ul>
+</div>
 <div class="add-pet">
   <input type="text" [(ngModel)]="newPet" placeholder="Pet" />
   <button (click)="addPet()">Add Pet</button>
 </div>
 
-<app-pet *ngFor="let pet of pets" [name]="pet"> </app-pet>
+<app-pet
+  *ngFor="let pet of pets"
+  [name]="pet"
+  [isFav]="isinFav(pet)"
+  (addFav)="addFav($event)"
+  (deleteFav)="deleteFav($event)"
+>
+</app-pet>

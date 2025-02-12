@@ -1,0 +1,15 @@
+.button {
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+.addButton {
+  background-color: #04aa6d; /* Green */
+}
+.deleteButton {
+  background-color: #ff0000; /* Green */
+}
